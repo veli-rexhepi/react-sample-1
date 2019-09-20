@@ -24,13 +24,17 @@ class ShouldComponentUpdateExample extends Component {
 	      	allowUpdate: props.allowUpdate,
 	    };	    
 
-	    // console.log('constructor: ', 'this.props.allowUpdate: ', this.props.allowUpdate, 'this.state.allowUpdate: ', this.state.allowUpdate);
+	    console.log('constructor: ', 'this.props.allowUpdate: ', this.props.allowUpdate, 'this.state.allowUpdate: ', this.state.allowUpdate);
   	}
 
+  	// static getDerivedStateFromProps(props, state) {
+  	// 	return { allowUpdate: props.allowUpdate }
+  	// }
+
   	// Allow or disallow updating of the component on react-select change
-  	shouldComponentUpdate() {
-  		//console.log('shouldComponentUpdate() this.props.allowUpdate: ', this.props.allowUpdate, 'this.state.allowUpdate: ', this.state.allowUpdate);
-  		return this.state.allowUpdate
+  	shouldComponentUpdate() {  	
+  		console.log('shouldComponentUpdate: ', 'this.props.allowUpdate: ', this.props.allowUpdate, 'this.state.allowUpdate: ', this.state.allowUpdate);	
+  		return (this.state.allowUpdate == 'true');
   	}
 
   	changeColor = () => {
@@ -110,12 +114,16 @@ class ShouldComponentUpdateExample extends Component {
  // 		return this.state.allowUpdate
 	// }
 
-	updateCompState = {
+	// updateCompState = {
 		// selectedOption: {value: this.props.allowUpdate, label: (this.props.allowUpdate == 'true') ? 'Allowed' : 'Disallowed'},
-		//selectedOption: {value: this.state.allowUpdate, label: (this.state.allowUpdate == 'true') ? 'Allowed' : 'Disallowed'},
-		selectedOption: null,
+		// selectedOption: {value: this.state.allowUpdate, label: (this.state.allowUpdate == 'true') ? 'Allowed' : 'Disallowed'},
+		// selectedOption: null,
 		// selectedOption: {value: true, label: 'Allowed'},
  		// selectedOption: {value: false, label: 'Disallowed'},
+	// }
+
+	updateCompState = {
+		selectedOption: null,
 	}
 
  	// setSelectInitialState = () => {
@@ -135,18 +143,18 @@ class ShouldComponentUpdateExample extends Component {
 
  	// Passing the react-select selected value to object state
  	handleChange = (selectedOption) => {
- 		// console.log('this.props.allowUpdate: ', this.props.allowUpdate, 
-			// 'this.state.allowUpdate: ', this.state.allowUpdate, 
-			// 'selectedOption: ', selectedOption, 
-			// 'this.updateCompState: ', this.updateCompState);
-
  		this.setState({ 
  			selectedOption,
- 			allowUpdate: selectedOption.value	
+ 			// selectedOption: {value: (this.props.allowUpdate == 'true'), label: (this.props.allowUpdate == 'true') ? 'Allowed' : 'Disallowed'},
+ 			allowUpdate: selectedOption.value
  		});
  	}
 
+ 	
+
  	render() {
+ 		console.log('render: ', 'this.props.allowUpdate: ', this.props.allowUpdate, 'this.state.allowUpdate: ', this.state.allowUpdate);
+
  		// this.setSelectInitialState;
  		// console.log('this.updateCompState', this.updateCompState);
 
@@ -188,7 +196,7 @@ class ShouldComponentUpdateExample extends Component {
 		            <div className={styles.verticalOrder}>										
 						<label id="beforeUpdateState" className={styles.displayBlockLabel} >Updating Component</label>			            
                     	<Select 
-                    		value = {selectedOption}
+                    		// value = {selectedOption}
                     		onChange = {this.handleChange}
                     		options = {options} 
                 		/>
