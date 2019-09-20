@@ -21,15 +21,15 @@ class ShouldComponentUpdateExample extends Component {
 	      	color1: "red", 
 	      	color2: "green", 
 	      	color3: "blue",
-	      	allowUpdate: props.allowUpdate
+	      	allowUpdate: props.allowUpdate,
 	    };	    
 
-	    //console.log('this.props.allowUpdate: ', this.props.allowUpdate, 'this.state.allowUpdate: ', this.state.allowUpdate);
+	    // console.log('constructor: ', 'this.props.allowUpdate: ', this.props.allowUpdate, 'this.state.allowUpdate: ', this.state.allowUpdate);
   	}
 
   	// Allow or disallow updating of the component on react-select change
   	shouldComponentUpdate() {
-  		console.log('shouldComponentUpdate() this.props.allowUpdate: ', this.props.allowUpdate, 'this.state.allowUpdate: ', this.state.allowUpdate);
+  		//console.log('shouldComponentUpdate() this.props.allowUpdate: ', this.props.allowUpdate, 'this.state.allowUpdate: ', this.state.allowUpdate);
   		return this.state.allowUpdate
   	}
 
@@ -84,14 +84,62 @@ class ShouldComponentUpdateExample extends Component {
  	}
 
  	// Defining the react-select component initial state
- 	updateCompState = {
- 		//selectedOption: {value: this.props.allowUpdate, label: (this.props.allowUpdate == 'true') ? 'Allowed' : 'Disallowed'},
- 		//selectedOption: {value: this.state.allowUpdate, label: (this.state.allowUpdate == 'true') ? 'Allowed' : 'Disallowed'},
- 		selectedOption: null,
- 	}
+ 	// updateCompState = {
+ 	// // 	//selectedOption: {value: this.props.allowUpdate, label: (this.props.allowUpdate == 'true') ? 'Allowed' : 'Disallowed'},
+ 	// 	if (this.state.allowUpdate) {
+ 	// 		selectedOption: {value: this.state.allowUpdate, label: (this.state.allowUpdate == 'true') ? 'Allowed' : 'Disallowed'},
+ 	// 	} else {
+ 	// 		selectedOption: {value: this.props.allowUpdate, label: (this.props.allowUpdate == 'true') ? 'Allowed' : 'Disallowed'},
+ 	// 	}
+ 	// 	// selectedOption: null,
+ 	// 	// selectedOption: {value: false, label: 'Disallowed'},
+ 	// }
+
+//console.log('this.state.allowUpdate: ', this.state.allowUpdate);
+	//  	if (this.state.allowUpdate) {
+ // 			updateCompState = {
+ // 				selectedOption: {value: this.state.allowUpdate, label: (this.state.allowUpdate == 'true') ? 'Allowed' : 'Disallowed'},
+ // 			}
+ // 		} else {
+ // 			updateCompState = {
+ // 				selectedOption: {value: this.props.allowUpdate, label: (this.props.allowUpdate == 'true') ? 'Allowed' : 'Disallowed'},
+ // 			}
+ // 		}
+
+ // 	setSelectInitialState = () => {
+ // 		return this.state.allowUpdate
+	// }
+
+	updateCompState = {
+		// selectedOption: {value: this.props.allowUpdate, label: (this.props.allowUpdate == 'true') ? 'Allowed' : 'Disallowed'},
+		//selectedOption: {value: this.state.allowUpdate, label: (this.state.allowUpdate == 'true') ? 'Allowed' : 'Disallowed'},
+		selectedOption: null,
+		// selectedOption: {value: true, label: 'Allowed'},
+ 		// selectedOption: {value: false, label: 'Disallowed'},
+	}
+
+ 	// setSelectInitialState = () => {
+			// if (selectedOption == 'undefined') {
+			// 	selectedOption: {value: this.props.allowUpdate, label: ((this.props.allowUpdate == 'true') ? 'Allowed' : 'Disallowed')}
+			// } else {
+			// 	selectedOption: {value: this.state.allowUpdate, label: (this.state.allowUpdate == 'true') ? 'Allowed' : 'Disallowed'}
+			// }
+			// var test = false, test2 = 'Disallowed';
+
+			// updateCompState = { selectedOption: {value: test, label: test2} }
+
+ 		// 	console.log('updateCompState: ', updateCompState);
+
+ 		// 	return updateCompState;
+ 		// }
 
  	// Passing the react-select selected value to object state
  	handleChange = (selectedOption) => {
+ 		// console.log('this.props.allowUpdate: ', this.props.allowUpdate, 
+			// 'this.state.allowUpdate: ', this.state.allowUpdate, 
+			// 'selectedOption: ', selectedOption, 
+			// 'this.updateCompState: ', this.updateCompState);
+
  		this.setState({ 
  			selectedOption,
  			allowUpdate: selectedOption.value	
@@ -99,9 +147,32 @@ class ShouldComponentUpdateExample extends Component {
  	}
 
  	render() {
+ 		// this.setSelectInitialState;
+ 		// console.log('this.updateCompState', this.updateCompState);
+
  		// Initializing react-select
-		const { selectedOption } = this.updateCompState;
-		console.log('this.props.allowUpdate: ', this.props.allowUpdate, 'this.state.allowUpdate: ', this.state.allowUpdate);
+ 			const { selectedOption } = this.updateCompState;
+ 			// const test = {{this.setSelectInitialState}};
+ 			console.log('selectedOption: ', selectedOption);
+		// const selectedOption = {value: this.state.allowUpdate, label: (this.state.allowUpdate == 'true') ? 'Allowed' : 'Disallowed'};
+
+		// console.log('selectedOption', selectedOption);
+
+		// if (this.state.allowUpdate) {
+ 			// const { selectedOption } = {value: this.state.allowUpdate, label: (this.state.allowUpdate == 'true') ? 'Allowed' : 'Disallowed'};
+ 		// } else {
+ 	// 		const { selectedOption } = {value: this.props.allowUpdate, label: (this.props.allowUpdate == 'true') ? 'Allowed' : 'Disallowed'};
+ 		// }
+
+ 		// const { this.state.allowUpdate };
+
+ 		// const selectedOption = {value: this.state.allowUpdate, label: (this.state.allowUpdate == 'true') ? 'Allowed' : 'Disallowed'};
+
+		//console.log('this.props.allowUpdate: ', this.props.allowUpdate, 'this.state.allowUpdate: ', this.state.allowUpdate);
+		// console.log('this.props.allowUpdate: ', this.props.allowUpdate, 
+		// 	'this.state.allowUpdate: ', this.state.allowUpdate, 
+		// 	'selectedOption: ', selectedOption, 
+		// 	'this.updateCompState: ', this.updateCompState);
 
 		return(			
 			<article className={["w3-card-2", styles.displayBlock].join(' ')}>

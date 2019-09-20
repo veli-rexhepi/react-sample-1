@@ -39,7 +39,7 @@
 	font-size: 16px;
     font-weight: bold;
     color: white;
-    min-width: 150px;   
+    /*min-width: 150px;   */
     margin: 0 1px;
     background-color: #a82025 !important;
     border: 2px solid white;
