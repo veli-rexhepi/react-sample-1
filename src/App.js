@@ -1,26 +1,65 @@
-import React from 'react';
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import Select from 'react-select';
 import logo from './logo.svg';
 import './App.css';
+import Header from './Components/Header.js';
+import Footer from './Components/Footer.js';
+import SetStateExample, { SetStateExampleCodeComponent } from './Components/SetStateExample.js';
+import GetDerivedStateFromPropsExample, { GetDerivedStateFromPropsExampleCodeComponent } from './Components/GetDerivedStateFromPropsExample.js';
+import ComponentDidMountExample, { ComponentDidMountExampleCodeComponent } from './Components/ComponentDidMountExample.js';
+import ShouldComponentUpdateExample, { ShouldComponentUpdateExampleCodeComponent } from './Components/ShouldComponentUpdateExample.js';
+import GetSnapshotBeforeUpdateExample, { GetSnapshotBeforeUpdateExampleCodeComponent } from './Components/GetSnapshotBeforeUpdateExample.js';
+import ComponentDidUpdateExample, { ComponentDidUpdateExampleCodeComponent } from './Components/ComponentDidUpdateExample.js';
+import ComponentWillUnmountExample, { ComponentWillUnmountExampleCodeComponent } from './Components/ComponentWillUnmountExample.js';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <Header />
+        
+        <div className="appBody">
+          <div className="leftSide">
+            <div className="verticalOrder">
+              <div className="horizontalOrder">
+                <SetStateExample />
+                <GetDerivedStateFromPropsExample favCol="maroon" />                
+              </div>
+
+              <div className="horizontalOrder">
+                <ComponentDidMountExample favCol="maroon" />
+                <ShouldComponentUpdateExample allowUpdate = "false" />
+              </div>
+
+              <div className="horizontalOrder">
+                <GetSnapshotBeforeUpdateExample />
+                <ComponentDidUpdateExample />                
+              </div>
+
+              <div className="horizontalOrder">                
+                <ComponentWillUnmountExample />
+              </div>
+            </div>
+          </div> 
+
+          <div className="rightSide">
+            <article className="codeComponentHolder">
+              <SetStateExampleCodeComponent />
+              <GetDerivedStateFromPropsExampleCodeComponent />
+              <ComponentDidMountExampleCodeComponent />
+              <ShouldComponentUpdateExampleCodeComponent />
+              <GetSnapshotBeforeUpdateExampleCodeComponent />
+              <ComponentDidUpdateExampleCodeComponent />
+              <ComponentWillUnmountExampleCodeComponent />
+            </article>
+          </div>         
+        </div>
+
+        <Footer />
+      </div>
+    );
+  }
 }
 
 export default App;

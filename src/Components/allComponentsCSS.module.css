@@ -1,0 +1,68 @@
+.displayBlock {
+	width: 49%;
+	margin: 0 0.5%;
+	padding: 15px;
+	background-color: #eff2f9;
+}
+
+.displayBlockTitle {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	color: #273a66;	
+	text-align: center;
+	border-bottom: 2px solid #a82025;
+}
+
+.displayBlockLabel {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	color: #273a66;	
+	text-indent: 10px;	
+}
+
+.verticalOrder {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.horizontalOrder {
+	display: flex;
+	justify-content: center;
+	margin: 20px 0 0 0;
+}
+
+.submitButton {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+    font-weight: bold;
+    color: white;
+    min-width: 150px;   
+    margin: 0 1px;
+    background-color: #a82025 !important;
+    border: 2px solid white;
+    border-radius: 5px !important;
+}
+
+.displayFeaturesBlock {
+	margin-bottom: 10px;
+	padding: 0 10px;
+	border: 2px solid white;
+    border-radius: 5px !important;
+}
+
+.displayFeaturesBlockLabel {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+    font-weight: bold;
+    color: #273a66;
+    margin-left: 5px;
+}
+
+.codeComponentImg {
+	display: none;
+	overflow: scroll;
+	max-height: 1058px;
+}

@@ -1,0 +1,38 @@
+.footer {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    padding: 14px 0;
+    background-color: #1a2747;
+}
+
+.visitCounter {
+    font-size: 16px;    
+    color: white;
+    text-align: center;    
+}
+
+.footerRights {
+    width: 1280px;      
+    text-align: center;
+    margin: 10px auto 0 auto;   
+    padding: 10px 0 0 0;
+    border-top: 1px solid #a82025;    
+}
+
+.footerCopyright {
+    display: block;
+    font-size: 12px;
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 3px black;
+}
+
+.footerDeveloper {
+    display: block;
+    font-size: 12px;
+    color: white;
+}
+
+.footerDeveloperAnchor {    
+    text-decoration: none;
+}

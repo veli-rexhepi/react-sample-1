@@ -1,0 +1,69 @@
+.header {
+	font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    min-width: 1280px;    
+    background-color: #253967;
+}
+
+.headerContainer {
+    display: flex;  
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;    
+    height: 101px;    
+}
+
+.companyLogoHolder {    
+    display: flex;
+    align-items: center;
+    padding: 5px;   
+    width: 260px; 
+    height: 101px;    
+}
+
+.siteTitle {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 34px;
+    line-height: 40px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: white;
+    text-align: center;
+    padding: 0;
+    margin: 0;    
+}
+
+.siteTitleDescription {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    color: white;
+    text-align: center;
+    padding: 0;
+    margin: 0;    
+}
+
+.searchBar {
+    display: flex;
+    align-items: center;
+    width: 260px;
+    height: 100%;     
+    padding-right: 10px;
+}
+
+.searchBarInput {
+    height: 30px !important;
+    padding: 0 16px!important;    
+    color: white !important;
+    background-color: #21325b !important;    
+}
+
+.searchBarButton {
+	color: #253967 !important;
+	font-weight: bold;
+    height: 30px;    
+    padding: 0 20px 0 15px !important;
+    background-color: white !important;
+}
