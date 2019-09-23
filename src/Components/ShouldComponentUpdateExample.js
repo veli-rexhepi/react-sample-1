@@ -22,14 +22,25 @@ class ShouldComponentUpdateExample extends Component {
 	      	color2: "green", 
 	      	color3: "blue",
 	      	allowUpdate: props.allowUpdate,
-	      	selectedOption: null,
+	      	// selectedOption: null,
 	    };	    
 
-	    console.log('constructor: ', 'this.props.allowUpdate: ', this.props.allowUpdate, 'this.state.allowUpdate: ', this.state.allowUpdate, 'this.state.selectedOption: ', this.state.selectedOption);
+	    this.updateCompState;
+
+	    console.log('constructor: ', 'this.props.allowUpdate: ', this.props.allowUpdate, 'this.state.allowUpdate: ', this.state.allowUpdate, 'this.getselectedOptionValue: ', this.getselectedOptionValue);
   	}
+
+ //  	updateCompState = {
+	// 	selectedOption: null,
+	// }
+
+	// getselectedOptionValue = {
+	// 	selectedOption.value;
+	// }
 
   	static getDerivedStateFromProps(props, state) {
   		
+  		alert(state.selectedOption);
 
   		//console.log('getDerivedStateFromProps, props.allowUpdate: ', props.allowUpdate, 'state.selectedOption: ', state.selectedOption);
 
@@ -37,6 +48,9 @@ class ShouldComponentUpdateExample extends Component {
 
   		if (state.selectedOption === null) {
   			return { selectedOption: {value: (props.allowUpdate == 'true'), label: (props.allowUpdate == 'true') ? 'Allowed' : 'Disallowed'}}
+  		} else {
+  			alert(state.selectedOption.value);
+  			return state.selectedOption.value
   		}
   	}
 
@@ -46,12 +60,12 @@ class ShouldComponentUpdateExample extends Component {
 
   	// Allow or disallow updating of the component on react-select change
   	shouldComponentUpdate(state) {  	
-  		console.log('shouldComponentUpdate: ', 'this.props.allowUpdate: ', this.props.allowUpdate, 'this.state.allowUpdate: ', state.allowUpdate, 'this.state.selectedOption: ', this.state.selectedOption);	
+  		// console.log('shouldComponentUpdate: ', 'this.props.allowUpdate: ', this.props.allowUpdate, 'this.state.allowUpdate: ', state.allowUpdate, 'this.state.selectedOption: ', this.state.selectedOption);	
   		
-  		return this.state.allowUpdate;
+  		// return this.state.allowUpdate;
   		// return this.state.selectedOption
 
-  		// return {(this.state.selectedOption == 'true') ? 'Allowed' : 'Disallowed'}
+  		return (this.state.selectedOption == 'true' ? true : false)
   	}
 
   	changeColor = () => {
@@ -139,9 +153,7 @@ class ShouldComponentUpdateExample extends Component {
  		// selectedOption: {value: false, label: 'Disallowed'},
 	// }
 
-	// updateCompState = {
-	// 	selectedOption: null,
-	// }
+	
 
  	// setSelectInitialState = () => {
 			// if (selectedOption == 'undefined') {
