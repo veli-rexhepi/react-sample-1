@@ -22,19 +22,36 @@ class ShouldComponentUpdateExample extends Component {
 	      	color2: "green", 
 	      	color3: "blue",
 	      	allowUpdate: props.allowUpdate,
+	      	selectedOption: null,
 	    };	    
 
-	    console.log('constructor: ', 'this.props.allowUpdate: ', this.props.allowUpdate, 'this.state.allowUpdate: ', this.state.allowUpdate);
+	    console.log('constructor: ', 'this.props.allowUpdate: ', this.props.allowUpdate, 'this.state.allowUpdate: ', this.state.allowUpdate, 'this.state.selectedOption: ', this.state.selectedOption);
   	}
 
-  	// static getDerivedStateFromProps(props, state) {
-  	// 	return { allowUpdate: props.allowUpdate }
+  	static getDerivedStateFromProps(props, state) {
+  		
+
+  		//console.log('getDerivedStateFromProps, props.allowUpdate: ', props.allowUpdate, 'state.selectedOption: ', state.selectedOption);
+
+  		// return { allowUpdate: props.allowUpdate }
+
+  		if (state.selectedOption === null) {
+  			return { selectedOption: {value: (props.allowUpdate == 'true'), label: (props.allowUpdate == 'true') ? 'Allowed' : 'Disallowed'}}
+  		}
+  	}
+
+  	// setSelectInitialState = {
+  	// 	selectedOption: {value: (this.props.allowUpdate == 'true'), label: (this.props.allowUpdate == 'true') ? 'Allowed' : 'Disallowed'}
   	// }
 
   	// Allow or disallow updating of the component on react-select change
-  	shouldComponentUpdate() {  	
-  		console.log('shouldComponentUpdate: ', 'this.props.allowUpdate: ', this.props.allowUpdate, 'this.state.allowUpdate: ', this.state.allowUpdate);	
-  		return (this.state.allowUpdate == 'true');
+  	shouldComponentUpdate(state) {  	
+  		console.log('shouldComponentUpdate: ', 'this.props.allowUpdate: ', this.props.allowUpdate, 'this.state.allowUpdate: ', state.allowUpdate, 'this.state.selectedOption: ', this.state.selectedOption);	
+  		
+  		return this.state.allowUpdate;
+  		// return this.state.selectedOption
+
+  		// return {(this.state.selectedOption == 'true') ? 'Allowed' : 'Disallowed'}
   	}
 
   	changeColor = () => {
@@ -122,9 +139,9 @@ class ShouldComponentUpdateExample extends Component {
  		// selectedOption: {value: false, label: 'Disallowed'},
 	// }
 
-	updateCompState = {
-		selectedOption: null,
-	}
+	// updateCompState = {
+	// 	selectedOption: null,
+	// }
 
  	// setSelectInitialState = () => {
 			// if (selectedOption == 'undefined') {
@@ -148,20 +165,22 @@ class ShouldComponentUpdateExample extends Component {
  			// selectedOption: {value: (this.props.allowUpdate == 'true'), label: (this.props.allowUpdate == 'true') ? 'Allowed' : 'Disallowed'},
  			allowUpdate: selectedOption.value
  		});
+
+ 		// console.log('handleChange: ', 'this.props.allowUpdate: ', this.props.allowUpdate, 'this.state.allowUpdate: ', this.state.allowUpdate, 'selectedOption: ', this.state.selectedOption);
  	}
 
  	
 
  	render() {
- 		console.log('render: ', 'this.props.allowUpdate: ', this.props.allowUpdate, 'this.state.allowUpdate: ', this.state.allowUpdate);
+ 		console.log('render: ', 'this.props.allowUpdate: ', this.props.allowUpdate, 'this.state.allowUpdate: ', this.state.allowUpdate, 'selectedOption: ', this.state.selectedOption);
 
  		// this.setSelectInitialState;
  		// console.log('this.updateCompState', this.updateCompState);
 
  		// Initializing react-select
- 			const { selectedOption } = this.updateCompState;
+ 			//const { selectedOption } = this.updateCompState;
  			// const test = {{this.setSelectInitialState}};
- 			console.log('selectedOption: ', selectedOption);
+ 			// console.log();
 		// const selectedOption = {value: this.state.allowUpdate, label: (this.state.allowUpdate == 'true') ? 'Allowed' : 'Disallowed'};
 
 		// console.log('selectedOption', selectedOption);
@@ -196,7 +215,7 @@ class ShouldComponentUpdateExample extends Component {
 		            <div className={styles.verticalOrder}>										
 						<label id="beforeUpdateState" className={styles.displayBlockLabel} >Updating Component</label>			            
                     	<Select 
-                    		// value = {selectedOption}
+                    		value = {this.state.selectedOption}
                     		onChange = {this.handleChange}
                     		options = {options} 
                 		/>

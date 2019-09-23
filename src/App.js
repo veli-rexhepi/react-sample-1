@@ -29,7 +29,7 @@ class App extends Component {
 
               <div className="horizontalOrder">
                 <ComponentDidMountExample favCol="maroon" />
-                <ShouldComponentUpdateExample allowUpdate = "true" />
+                <ShouldComponentUpdateExample allowUpdate = "false" />
               </div>
 
               <div className="horizontalOrder">
