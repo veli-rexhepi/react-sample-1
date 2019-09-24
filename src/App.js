@@ -53,7 +53,9 @@ class App extends Component {
                including a property for sending select selected option. Re-caling (re-rendering) the <ShouldComponentUpdateExampleCodeComponent />
                should display correctly slected option in select.
 
-               Option 2: Use a button instead select (Display/Hide Code button is working when ShouldComponentUpdate returns false.) 
+               Option 2: Use a button instead react-select component (Display/Hide Code button is working when ShouldComponentUpdate returns false.) 
+
+               Option 3: Use a HTML select element instead of react-select element
               */}
               <ShouldComponentUpdateExampleCodeComponent />
               <GetSnapshotBeforeUpdateExampleCodeComponent />
