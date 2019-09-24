@@ -8,7 +8,7 @@ import Footer from './Components/Footer.js';
 import SetStateExample, { SetStateExampleCodeComponent } from './Components/SetStateExample.js';
 import GetDerivedStateFromPropsExample, { GetDerivedStateFromPropsExampleCodeComponent } from './Components/GetDerivedStateFromPropsExample.js';
 import ComponentDidMountExample, { ComponentDidMountExampleCodeComponent } from './Components/ComponentDidMountExample.js';
-import ShouldComponentUpdateExample, { ShouldComponentUpdateExampleCodeComponent } from './Components/ShouldComponentUpdateExample.js';
+import ShouldComponentUpdateExample, { ShouldComponentUpdateExampleCodeComponent, ReactSelectComponent } from './Components/ShouldComponentUpdateExample.js';
 import GetSnapshotBeforeUpdateExample, { GetSnapshotBeforeUpdateExampleCodeComponent } from './Components/GetSnapshotBeforeUpdateExample.js';
 import ComponentDidUpdateExample, { ComponentDidUpdateExampleCodeComponent } from './Components/ComponentDidUpdateExample.js';
 import ComponentWillUnmountExample, { ComponentWillUnmountExampleCodeComponent } from './Components/ComponentWillUnmountExample.js';
@@ -38,7 +38,7 @@ class App extends Component {
               </div>
 
               <div className="horizontalOrder">                
-                <ComponentWillUnmountExample />
+                <ComponentWillUnmountExample />             
               </div>
             </div>
           </div> 
@@ -48,6 +48,9 @@ class App extends Component {
               <SetStateExampleCodeComponent />
               <GetDerivedStateFromPropsExampleCodeComponent />
               <ComponentDidMountExampleCodeComponent />
+              {/* Create a new component with a select, on select change re-call the <ShouldComponentUpdateExampleCodeComponent />
+               including a property for sending select selected option. Re-caling (re-rendering) the <ShouldComponentUpdateExampleCodeComponent />
+               should display correctly slected option in select */}
               <ShouldComponentUpdateExampleCodeComponent />
               <GetSnapshotBeforeUpdateExampleCodeComponent />
               <ComponentDidUpdateExampleCodeComponent />
