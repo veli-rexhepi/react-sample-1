@@ -48,9 +48,13 @@ class App extends Component {
               <SetStateExampleCodeComponent />
               <GetDerivedStateFromPropsExampleCodeComponent />
               <ComponentDidMountExampleCodeComponent />
-              {/* Create a new component with a select, on select change re-call the <ShouldComponentUpdateExampleCodeComponent />
+              {/* 
+                Option 1: Create a new component with a select, on select change re-call the <ShouldComponentUpdateExampleCodeComponent />
                including a property for sending select selected option. Re-caling (re-rendering) the <ShouldComponentUpdateExampleCodeComponent />
-               should display correctly slected option in select */}
+               should display correctly slected option in select.
+
+               Option 2: Use a button instead select (Display/Hide Code button is working when ShouldComponentUpdate returns false.) 
+              */}
               <ShouldComponentUpdateExampleCodeComponent />
               <GetSnapshotBeforeUpdateExampleCodeComponent />
               <ComponentDidUpdateExampleCodeComponent />
