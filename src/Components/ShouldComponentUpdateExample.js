@@ -31,21 +31,9 @@ class ShouldComponentUpdateExample extends Component {
 	    console.log('constructor: ', 'this.selectedOption: ', this.selectedOption);
   	}
 
-  	// Allow or disallow updating of the component on react-select change
-  	shouldComponentUpdate() {    		
-
-  		// var test = document.getElementById('selectOptionElement').children[1].children[0].children[0].textContent;
-
-  		// if (this.selectedOption.value === true) {
-  		// 	test = 'Allowed';
-  		// } else {
-  		// 	test = 'Disallowed';
-  		// }  		
-
-  		console.log('shouldComponentUpdate, this.selectedOption.value: ', this.selectedOption.value);
-
-  		return this.selectedOption.value;
-  		// return true
+  	// Allow or disallow updating of the component
+  	shouldComponentUpdate() {
+  		return this.selectedOption.value;  		
   	}
 
   	changeColor = () => {
@@ -98,17 +86,43 @@ class ShouldComponentUpdateExample extends Component {
  		} 		
  	} 	
 
- 	// Passing the react-select selected value to object state
- 	handleChange = (selectedOption) => {
- 		this.setState({});
+ 	setSelectedIfTrue = () => {
+ 		var result;
 
-		this.selectedOption = selectedOption;
+ 		if(this.selectedOption.value === true) { 
+ 			result = (
+			 			<select id='selectOptionElement' className={["w3-card-2", styles.selectOptionElement].join(' ')} onChange={ () => this.handleChange() }>
+			        		<option value='Allowed' selected>Allowed</option>
+			        		<option value='Disallowed'>Disallowed</option>
+			    		</select>
+			 		); //
+		} else {
+			result = (
+			 			<select id='selectOptionElement' className={["w3-card-2", styles.selectOptionElement].join(' ')} onChange={ () => this.handleChange() }>
+			        		<option value='Allowed'>Allowed</option>
+			        		<option value='Disallowed' selected>Disallowed</option>
+			    		</select>
+			 		); //
+		};
 
- 		console.log('handleChange: this.selectedOption: ', this.selectedOption, 'selectedOption: ', selectedOption);
- 	} 	
+		console.log('setSelectedIfTrue: result: ', result, 'this.selectedOption.value:', this.selectedOption.value);
+ 		
+ 		return result;
+ 	}
+
+ 	handleChange = () => {
+ 		var selectOptionElement = document.getElementById('selectOptionElement').value;
+
+		this.selectedOption = {
+			value: (selectOptionElement == 'Allowed') ? true : false, label: (selectOptionElement == 'Allowed') ? 'Allowed' : 'Disallowed'
+		};
+
+ 		console.log('handleChange: this.selectedOption: ', this.selectedOption, 'selectOptionElement: ', selectOptionElement);
+ 		this.render();
+ 	} 
 
  	render() {
- 		console.log('render: this.selectedOption: ', this.selectedOption, 'this.selectedOption.value: ', this.selectedOption.value, 'selectOptionElement:', );
+ 		console.log('render: this.selectedOption: ', this.selectedOption);
  		
 		return(			
 			<article className={["w3-card-2", styles.displayBlock].join(' ')}>
@@ -121,13 +135,9 @@ class ShouldComponentUpdateExample extends Component {
 			            <label className={styles.displayBlockLabel} style={{color: this.state.color2}}>Color 2: {this.state.color2}</label>
 			            <label className={styles.displayBlockLabel} style={{color: this.state.color3}}>Color 3: {this.state.color3}</label>		            
 		            </div>
-		            <div className={styles.verticalOrder}>										
+		            <div className={[styles.verticalOrder, styles.horizontalOrderRight].join(' ')}>										
 						<label id="beforeUpdateState" className={styles.displayBlockLabel} >Updating Component</label>			            
-                    	<Select id="selectOptionElement"
-                    		value = {this.selectedOption}
-                    		onChange = {this.handleChange}
-                    		options = {options} 
-                		/>
+                    	{ this.setSelectedIfTrue() }
 		            </div>
 	            </div>
 

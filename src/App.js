@@ -29,7 +29,7 @@ class App extends Component {
 
               <div className="horizontalOrder">
                 <ComponentDidMountExample favCol="maroon" />
-                <ShouldComponentUpdateExample allowUpdate = "false" />
+                <ShouldComponentUpdateExample allowUpdate = "true" />
               </div>
 
               <div className="horizontalOrder">
@@ -55,7 +55,7 @@ class App extends Component {
 
                Option 2: Use a button instead react-select component (Display/Hide Code button is working when ShouldComponentUpdate returns false.) 
 
-               Option 3: Use a HTML select element instead of react-select element
+               Option 3: Use a HTML select element instead o
               */}
               <ShouldComponentUpdateExampleCodeComponent />
               <GetSnapshotBeforeUpdateExampleCodeComponent />
