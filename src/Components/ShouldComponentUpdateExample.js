@@ -26,9 +26,7 @@ class ShouldComponentUpdateExample extends Component {
 	      	color1: "red", 
 	      	color2: "green", 
 	      	color3: "blue"
-	    };	    
-
-	    console.log('constructor: ', 'this.selectedOption: ', this.selectedOption);
+	    };    
   	}
 
   	// Allow or disallow updating of the component
@@ -91,23 +89,23 @@ class ShouldComponentUpdateExample extends Component {
 
  		if(this.selectedOption.value === true) { 
  			result = (
-			 			<select id='selectOptionElement' className={["w3-card-2", styles.selectOptionElement].join(' ')} onChange={ () => this.handleChange() }>
-			        		<option value='Allowed' selected>Allowed</option>
+			 			<select id='selectOptionElement' className={["w3-card-2", styles.selectOptionElement].join(' ')} 
+			 					onChange={ () => this.handleChange() } value='Allowed'>
+			        		<option value='Allowed'>Allowed</option>
 			        		<option value='Disallowed'>Disallowed</option>
 			    		</select>
 			 		); //
 		} else {
 			result = (
-			 			<select id='selectOptionElement' className={["w3-card-2", styles.selectOptionElement].join(' ')} onChange={ () => this.handleChange() }>
+			 			<select id='selectOptionElement' className={["w3-card-2", styles.selectOptionElement].join(' ')} 
+			 					onChange={ () => this.handleChange() } value='Disallowed'>
 			        		<option value='Allowed'>Allowed</option>
-			        		<option value='Disallowed' selected>Disallowed</option>
+			        		<option value='Disallowed'>Disallowed</option>
 			    		</select>
 			 		); //
 		};
 
-		console.log('setSelectedIfTrue: result: ', result, 'this.selectedOption.value:', this.selectedOption.value);
- 		
- 		return result;
+		return result;
  	}
 
  	handleChange = () => {
@@ -117,14 +115,11 @@ class ShouldComponentUpdateExample extends Component {
 			value: (selectOptionElement == 'Allowed') ? true : false, label: (selectOptionElement == 'Allowed') ? 'Allowed' : 'Disallowed'
 		};
 
- 		console.log('handleChange: this.selectedOption: ', this.selectedOption, 'selectOptionElement: ', selectOptionElement);
  		this.render();
  	} 
 
  	render() {
- 		console.log('render: this.selectedOption: ', this.selectedOption);
- 		
-		return(			
+ 		return(			
 			<article className={["w3-card-2", styles.displayBlock].join(' ')}>
 				<h3 className={styles.displayBlockTitle}>Method <span style={{color: 'red'}}>ShouldComponentUpdate()</span></h3>
 
@@ -136,7 +131,7 @@ class ShouldComponentUpdateExample extends Component {
 			            <label className={styles.displayBlockLabel} style={{color: this.state.color3}}>Color 3: {this.state.color3}</label>		            
 		            </div>
 		            <div className={[styles.verticalOrder, styles.horizontalOrderRight].join(' ')}>										
-						<label id="beforeUpdateState" className={styles.displayBlockLabel} >Updating Component</label>			            
+						<label id="beforeUpdateState" className={styles.displayBlockLabel} >Component Update</label>			            
                     	{ this.setSelectedIfTrue() }
 		            </div>
 	            </div>

@@ -3,7 +3,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import styles from './allComponentsCSS.module.css';
-import GetDerivedStateFromPropsExampleCode from './../Images/setStateExampleCode.png';
+import GetDerivedStateFromPropsExampleCode from './../Images/GetDerivedStateFromPropsCode.png';
 
 class GetDerivedStateFromPropsExample extends Component {
 
@@ -18,6 +18,7 @@ class GetDerivedStateFromPropsExample extends Component {
 	    };	    
   	}
 
+	// Takes initial property value from <ComponentDidMountExample favCol="maroon" /> and stores it to the state object
   	static getDerivedStateFromProps(props, state) {  		
   		return (  			 	
 			{ 
@@ -30,7 +31,8 @@ class GetDerivedStateFromPropsExample extends Component {
 
   	changeColor = () => {
   		alert('getDerivedStateFromProps() is called right before rendering and it set\'s (overwrites) the last two properties ' + 
-  			'of the state object as shown in the getDerivedStateFromProps() method, see the code. So, that\'s why Color 2 & 3 remains in maroon.');
+  			'of the state object as shown in the getDerivedStateFromProps() method, see the code. So, that\'s why the Color 2 & 3 ' + 
+  			'remains in maroon (unchanged).');
 
 	    this.setState({
 	    	state: "updated values",
@@ -43,7 +45,8 @@ class GetDerivedStateFromPropsExample extends Component {
 	resetColor = () => {
 	  	if (this.state.state !== "initial values") {
 	  		alert('getDerivedStateFromProps() is called right before rendering and it set\'s (overwrites) the last two properties ' + 
-  				'of the state object as shown in the getDerivedStateFromProps() method, see the code. So, that\'s why Color 2 & 3 remains in maroon.');
+  				'of the state object as shown in the getDerivedStateFromProps() method, see the code. So, that\'s why the Color 2 & 3 ' + 
+  				'remains in maroon (unchanged).');
 
 	  		this.setState({
 		 		state: "restored values",
@@ -108,7 +111,7 @@ class GetDerivedStateFromPropsExample extends Component {
 		);
 	}
 }
-
+//
 class GetDerivedStateFromPropsExampleCodeComponent extends Component {
 	render() {
 		return(
@@ -118,6 +121,6 @@ class GetDerivedStateFromPropsExampleCodeComponent extends Component {
 		);
 	}
 }
-
+//
 export { GetDerivedStateFromPropsExampleCodeComponent };
 export default GetDerivedStateFromPropsExample;

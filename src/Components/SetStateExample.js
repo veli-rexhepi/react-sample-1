@@ -18,8 +18,9 @@ class SetStateExample extends Component {
 	    };	    
   	}
 
+  	// Chage the component state values only
   	changeColor = () => {
-  		alert('setState() is used to change the component properties initial value\n\nsee changeColor method in code');
+  		alert('setState() called to change the component state values\n\nsee changeColor method in code');
 
 	    this.setState({
 	    	state: 'updated values',
@@ -29,6 +30,7 @@ class SetStateExample extends Component {
 	    });
   	}
 
+  	// Change the component state values only if they are not the initially ones
 	resetColor = () => {
 	  	if (this.state.state !== 'initial values') {
 	  		this.setState({
@@ -40,6 +42,7 @@ class SetStateExample extends Component {
 	  	} 	
  	}
 
+ 	// Hide all code displaying elements which are shown
 	closeAllCodeElements = () => {
  		var codeElements, codeButtons;
 
@@ -59,6 +62,7 @@ class SetStateExample extends Component {
  		}
  	}
 
+ 	// Display the code for this component
  	displayCode = () => { 		
 
  		if (document.getElementById('SetStateExampleCode').style.display != 'block') {
@@ -95,7 +99,7 @@ class SetStateExample extends Component {
 		);
 	}
 }
-
+//
 class SetStateExampleCodeComponent extends Component {
 	render() {
 		return(
@@ -105,6 +109,6 @@ class SetStateExampleCodeComponent extends Component {
 		);
 	}
 }
-
+//
 export { SetStateExampleCodeComponent };
 export default SetStateExample;

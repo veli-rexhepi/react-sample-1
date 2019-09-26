@@ -29,7 +29,7 @@ class App extends Component {
 
               <div className="horizontalOrder">
                 <ComponentDidMountExample favCol="maroon" />
-                <ShouldComponentUpdateExample allowUpdate = "true" />
+                <ShouldComponentUpdateExample allowUpdate = "false" />
               </div>
 
               <div className="horizontalOrder">
@@ -48,15 +48,6 @@ class App extends Component {
               <SetStateExampleCodeComponent />
               <GetDerivedStateFromPropsExampleCodeComponent />
               <ComponentDidMountExampleCodeComponent />
-              {/* 
-                Option 1: Create a new component with a select, on select change re-call the <ShouldComponentUpdateExampleCodeComponent />
-               including a property for sending select selected option. Re-caling (re-rendering) the <ShouldComponentUpdateExampleCodeComponent />
-               should display correctly slected option in select.
-
-               Option 2: Use a button instead react-select component (Display/Hide Code button is working when ShouldComponentUpdate returns false.) 
-
-               Option 3: Use a HTML select element instead o
-              */}
               <ShouldComponentUpdateExampleCodeComponent />
               <GetSnapshotBeforeUpdateExampleCodeComponent />
               <ComponentDidUpdateExampleCodeComponent />

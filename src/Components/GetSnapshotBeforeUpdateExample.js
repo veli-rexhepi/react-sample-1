@@ -29,6 +29,9 @@ class GetSnapshotBeforeUpdateExample extends Component {
   		document.getElementById("beforeUpdateColor3").style.color = prevState.color3;
   	}
 
+  	componentDidUpdate() {    
+	}
+
   	changeColor = () => {
   		alert("Every time you change the colors the prior values are stored and shown, see below");
 
