@@ -69,8 +69,6 @@ class ComponentDidMountExample extends Component {
  		let compCont;
 		if (this.state.show) {
 			compCont = <ComponentContent firstTime={ this.state.firstTime } currentState={ this.storeState } />;
-		} else {
-			compCont = "";
 		};
 
 		return(
@@ -80,7 +78,7 @@ class ComponentDidMountExample extends Component {
 				
 				{ compCont }
 
-				<div className={[styles.horizontalOrder, styles.emptySpace].join(' ')}>
+				<div className={[styles.horizontalOrder, styles.emptySpaceMargin].join(' ')}>
 		            <button type="button" className={["w3-card-2 w3-button", styles.submitButton].join(' ')} 
 		            	onClick={() => this.displayCompContent(true)}>Show Content</button>
 		            <button type="button" className={["w3-card-2 w3-button", styles.submitButton].join(' ')} 
@@ -118,22 +116,6 @@ class ComponentContent extends Component {
 		);
 	}
 }
-
-// class ComponentEmpty extends Component {
-
-// 	render() {		
-// 		return(
-// 			<div className={styles.horizontalOrder}>
-// 				<div className={styles.verticalOrder}>										
-// 					<label className={styles.displayBlockLabel} style={{visibility: "hidden"}}>. </label>
-// 		            <label className={styles.displayBlockLabel} style={{visibility: "hidden"}}>. </label>
-// 		            <label className={styles.displayBlockLabel} style={{visibility: "hidden"}}>. </label>
-// 		            <label className={styles.displayBlockLabel} style={{visibility: "hidden"}}>. </label>		            
-// 	            </div>
-//             </div>
-// 		);
-// 	}
-// }
 
 class ComponentDidMountExampleCodeComponent extends Component {
 

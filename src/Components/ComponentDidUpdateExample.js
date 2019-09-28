@@ -86,7 +86,7 @@ class ComponentDidUpdateExample extends Component {
 		            </div>
 	            </div>
 
-	            <div className={styles.horizontalOrder}>
+	            <div className={[styles.horizontalOrder, styles.emptySpaceMargin].join(' ')}>
 		            <button type="button" className={["w3-card-2 w3-button", styles.submitButton].join(' ')} onClick={this.resetColor}>Reset Color</button>
 		            <button type="button" className={["w3-card-2 w3-button", styles.submitButton].join(' ')} onClick={this.changeColor}>Change Color</button>
 		            <button id='ComponentDidUpdateExampleDisplaybutton' type='button' className={['w3-card-2 w3-button codeButton', styles.submitButton].join(' ')} 
