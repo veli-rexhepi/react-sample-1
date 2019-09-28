@@ -1,7 +1,6 @@
 /* Method ComponentDidUpdateExample() */
 
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import styles from './allComponentsCSS.module.css';
 import ComponentDidUpdateExampleCode from './../Images/ComponentDidUpdateCode.png';
 
@@ -50,7 +49,7 @@ class ComponentDidUpdateExample extends Component {
  		codeButtons = document.getElementsByClassName('codeButton');
 
  		for (let i = 0; i < codeElements.length; i ++) {
- 			if (codeElements[i].style.display != 'none') { 				
+ 			if (codeElements[i].style.display !== 'none') { 				
  				codeElements[i].style.display = 'none';
  			} 			
  		}
@@ -63,7 +62,7 @@ class ComponentDidUpdateExample extends Component {
  	}
 
  	displayCode = () => {
- 		if (document.getElementById('ComponentDidUpdateExampleCode').style.display != 'block') {
+ 		if (document.getElementById('ComponentDidUpdateExampleCode').style.display !== 'block') {
  			this.closeAllCodeElements();
  			
  			document.getElementById('ComponentDidUpdateExampleCode').style.display = 'block';

@@ -1,21 +1,19 @@
 /* Method ShouldComponentUpdateExample() */
 
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import Select from 'react-select';
 import styles from './allComponentsCSS.module.css';
 import ShouldComponentUpdateExampleCode from './../Images/ShouldComponentUpdateCode.png';
 
-const options = [
- 		{value: true, label: 'Allowed'},
- 		{value: false, label: 'Disallowed'}
-	];
+// const options = [
+//  		{value: true, label: 'Allowed'},
+//  		{value: false, label: 'Disallowed'}
+// 	];
 
 class ShouldComponentUpdateExample extends Component {
 
 	// Get allowUpdate prop value from component and convert it to the object as required for react-select component
 	selectedOption = {
-		value: (this.props.allowUpdate == 'true') ? true : false, label: (this.props.allowUpdate == 'true') ? 'Allowed' : 'Disallowed'
+		value: (this.props.allowUpdate === 'true') ? true : false, label: (this.props.allowUpdate === 'true') ? 'Allowed' : 'Disallowed'
 	};
 
 	constructor(props) {
@@ -61,7 +59,7 @@ class ShouldComponentUpdateExample extends Component {
  		codeButtons = document.getElementsByClassName('codeButton');
 
  		for (let i = 0; i < codeElements.length; i ++) {
- 			if (codeElements[i].style.display != 'none') { 				
+ 			if (codeElements[i].style.display !== 'none') { 				
  				codeElements[i].style.display = 'none';
  			} 			
  		}
@@ -74,7 +72,7 @@ class ShouldComponentUpdateExample extends Component {
  	}
 
  	displayCode = () => {
- 		if (document.getElementById('ShouldComponentUpdateExampleCode').style.display != 'block') {
+ 		if (document.getElementById('ShouldComponentUpdateExampleCode').style.display !== 'block') {
  			this.closeAllCodeElements();
  			
  			document.getElementById('ShouldComponentUpdateExampleCode').style.display = 'block';
@@ -112,7 +110,7 @@ class ShouldComponentUpdateExample extends Component {
  		var selectOptionElement = document.getElementById('selectOptionElement').value;
 
 		this.selectedOption = {
-			value: (selectOptionElement == 'Allowed') ? true : false, label: (selectOptionElement == 'Allowed') ? 'Allowed' : 'Disallowed'
+			value: (selectOptionElement === 'Allowed') ? true : false, label: (selectOptionElement === 'Allowed') ? 'Allowed' : 'Disallowed'
 		};
 
  		this.render();

@@ -1,7 +1,6 @@
 /* Method getDerivedStateFromProps() */
 
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import styles from './allComponentsCSS.module.css';
 import GetDerivedStateFromPropsExampleCode from './../Images/GetDerivedStateFromPropsCode.png';
 
@@ -64,7 +63,7 @@ class GetDerivedStateFromPropsExample extends Component {
  		codeButtons = document.getElementsByClassName('codeButton');
 
  		for (let i = 0; i < codeElements.length; i ++) {
- 			if (codeElements[i].style.display != 'none') { 				
+ 			if (codeElements[i].style.display !== 'none') { 				
  				codeElements[i].style.display = 'none';
  			} 			
  		}
@@ -77,7 +76,7 @@ class GetDerivedStateFromPropsExample extends Component {
  	}
 
  	displayCode = () => {
- 		if (document.getElementById('GetDerivedStateFromPropsExampleCode').style.display != 'block') {
+ 		if (document.getElementById('GetDerivedStateFromPropsExampleCode').style.display !== 'block') {
  			this.closeAllCodeElements();
 
  			document.getElementById('GetDerivedStateFromPropsExampleCode').style.display = 'block';

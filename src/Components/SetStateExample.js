@@ -1,7 +1,6 @@
 /* Method setState() */
 
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import styles from './allComponentsCSS.module.css';
 import SetStateExampleCode from './../Images/setStateExampleCode.png';
 
@@ -50,7 +49,7 @@ class SetStateExample extends Component {
  		codeButtons = document.getElementsByClassName('codeButton');
 
  		for (let i = 0; i < codeElements.length; i ++) {
- 			if (codeElements[i].style.display != 'none') { 				
+ 			if (codeElements[i].style.display !== 'none') { 				
  				codeElements[i].style.display = 'none';
  			} 			
  		}
@@ -65,7 +64,7 @@ class SetStateExample extends Component {
  	// Display the code for this component
  	displayCode = () => { 		
 
- 		if (document.getElementById('SetStateExampleCode').style.display != 'block') {
+ 		if (document.getElementById('SetStateExampleCode').style.display !== 'block') {
  			this.closeAllCodeElements();
 
  			document.getElementById('SetStateExampleCode').style.display = 'block';

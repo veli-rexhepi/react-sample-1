@@ -31,7 +31,7 @@
 .horizontalOrder {
 	display: flex;
 	justify-content: center;
-	margin: 20px 0 0 0;
+	/*margin: 20px 0 0 0;*/
 }
 
 .horizontalOrderRight {
@@ -82,4 +82,14 @@
 	background-color: #a82025;
 	border: 2px solid white;
     border-radius: 5px;
+}
+
+/*.emptySpace {	
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}*/
+
+.emptySpace {	
+	margin-top: 5px;
 }

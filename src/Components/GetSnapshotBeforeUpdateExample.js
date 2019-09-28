@@ -1,7 +1,6 @@
 /* Method GetSnapshotBeforeUpdateExample() */
 
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import styles from './allComponentsCSS.module.css';
 import GetSnapshotBeforeUpdateExampleCode from './../Images/GetSnapshotBeforeUpdateCode.png';
 
@@ -63,7 +62,7 @@ class GetSnapshotBeforeUpdateExample extends Component {
  		codeButtons = document.getElementsByClassName('codeButton');
 
  		for (let i = 0; i < codeElements.length; i ++) {
- 			if (codeElements[i].style.display != 'none') { 				
+ 			if (codeElements[i].style.display !== 'none') { 				
  				codeElements[i].style.display = 'none';
  			} 			
  		}
@@ -76,7 +75,7 @@ class GetSnapshotBeforeUpdateExample extends Component {
  	}
 
  	displayCode = () => {
- 		if (document.getElementById('GetSnapshotBeforeUpdateExampleCode').style.display != 'block') {
+ 		if (document.getElementById('GetSnapshotBeforeUpdateExampleCode').style.display !== 'block') {
  			this.closeAllCodeElements();
  			
  			document.getElementById('GetSnapshotBeforeUpdateExampleCode').style.display = 'block';

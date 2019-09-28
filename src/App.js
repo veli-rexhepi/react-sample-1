@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import Select from 'react-select';
-import logo from './logo.svg';
 import './App.css';
 import Header from './Components/Header.js';
 import Footer from './Components/Footer.js';
 import SetStateExample, { SetStateExampleCodeComponent } from './Components/SetStateExample.js';
 import GetDerivedStateFromPropsExample, { GetDerivedStateFromPropsExampleCodeComponent } from './Components/GetDerivedStateFromPropsExample.js';
 import ComponentDidMountExample, { ComponentDidMountExampleCodeComponent } from './Components/ComponentDidMountExample.js';
-import ShouldComponentUpdateExample, { ShouldComponentUpdateExampleCodeComponent, ReactSelectComponent } from './Components/ShouldComponentUpdateExample.js';
+import ShouldComponentUpdateExample, { ShouldComponentUpdateExampleCodeComponent/*, ReactSelectComponent*/ } from './Components/ShouldComponentUpdateExample.js';
 import GetSnapshotBeforeUpdateExample, { GetSnapshotBeforeUpdateExampleCodeComponent } from './Components/GetSnapshotBeforeUpdateExample.js';
 import ComponentDidUpdateExample, { ComponentDidUpdateExampleCodeComponent } from './Components/ComponentDidUpdateExample.js';
 import ComponentWillUnmountExample, { ComponentWillUnmountExampleCodeComponent } from './Components/ComponentWillUnmountExample.js';

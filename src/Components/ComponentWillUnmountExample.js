@@ -1,7 +1,6 @@
 /* Method ComponentWillUnmountExample() */
 
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import styles from './allComponentsCSS.module.css';
 import ComponentWillUnmountExampleCode from './../Images/setStateExampleCode.png';
 
@@ -26,7 +25,7 @@ class ComponentWillUnmountExample extends Component {
   	}  	
 
   	displayCode = () => {
- 		if (document.getElementById('ComponentWillUnmountExampleCode').style.display != 'block') {
+ 		if (document.getElementById('ComponentWillUnmountExampleCode').style.display !== 'block') {
  			this.closeAllCodeElements();
 
  			document.getElementById('ComponentWillUnmountExampleCode').style.display = 'block';
@@ -43,7 +42,7 @@ class ComponentWillUnmountExample extends Component {
  		codeButtons = document.getElementsByClassName('codeButton');
 
  		for (let i = 0; i < codeElements.length; i ++) {
- 			if (codeElements[i].style.display != 'none') { 				
+ 			if (codeElements[i].style.display !== 'none') { 				
  				codeElements[i].style.display = 'none';
  			} 			
  		}

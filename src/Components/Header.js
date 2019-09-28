@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import 'w3-css/4/w3pro.css';
 import styles from './Header.module.css';
 import companyLogo from './../Images/Sallyport Caliburn Logo 3 250x50.png';
@@ -9,7 +8,7 @@ class Header extends Component {
 		return(
 			<header className={["w3-card-4", styles.header].join(' ')}>
 				<div className={styles.headerContainer}>
-					<a className={styles.companyLogoHolder} href="" target="_parent">
+					<a className={styles.companyLogoHolder} href="header.js" target="_parent">
 						<img src={companyLogo} alt="Company Logo" width="250" height="50" />
 					</a>
 
