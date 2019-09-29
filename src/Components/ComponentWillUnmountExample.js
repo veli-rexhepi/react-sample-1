@@ -1,7 +1,7 @@
 /* Method ComponentWillUnmountExample() */
 
 import React, { Component } from 'react';
-import styles from './allComponentsCSS.module.css';
+import styles from './../CSS/allComponentsCSS.module.css';
 import ComponentWillUnmountExampleCode from './../Images/setStateExampleCode.png';
 
 class ComponentWillUnmountExample extends Component {
@@ -58,12 +58,10 @@ class ComponentWillUnmountExample extends Component {
  		let compCont;
 		if (this.state.show) {
 			compCont = <ComponentContent />;
-		} else {
-			compCont = <ComponentEmpty />;
 		};
 
 		return(
-			<article className={["w3-card-2", styles.displayBlock].join(' ')}>
+			<article className={["w3-card-2", styles.displayBlock, styles.emptySpace].join(' ')}>
 				<h3 className={styles.displayBlockTitle}>Method <span style={{color: 'red'}}>ComponentWillUnmount()</span></h3>
 				
 				{compCont}
@@ -78,7 +76,6 @@ class ComponentWillUnmountExample extends Component {
 		);
 	}
 }
-
 //
 class ComponentContent extends Component {
 	componentWillUnmount() {
@@ -99,21 +96,6 @@ class ComponentContent extends Component {
 	}
 }
 
-class ComponentEmpty extends Component {
-	render() {
-		return(
-			<div className={styles.horizontalOrder}>
-				<div className={styles.verticalOrder}>										
-					<label className={styles.displayBlockLabel} style={{visibility: "hidden"}}>. </label>
-		            <label className={styles.displayBlockLabel} style={{visibility: "hidden"}}>. </label>
-		            <label className={styles.displayBlockLabel} style={{visibility: "hidden"}}>. </label>
-		            <label className={styles.displayBlockLabel} style={{visibility: "hidden"}}>. </label>		            
-	            </div>
-            </div>
-		);
-	}
-}
-
 class ComponentWillUnmountExampleCodeComponent extends Component {
 	render() {
 		return(
@@ -123,6 +105,6 @@ class ComponentWillUnmountExampleCodeComponent extends Component {
 		);
 	}
 }
-
+//
 export { ComponentWillUnmountExampleCodeComponent };
 export default ComponentWillUnmountExample;

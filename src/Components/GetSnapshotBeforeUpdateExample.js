@@ -1,7 +1,7 @@
 /* Method GetSnapshotBeforeUpdateExample() */
 
 import React, { Component } from 'react';
-import styles from './allComponentsCSS.module.css';
+import styles from './../CSS/allComponentsCSS.module.css';
 import GetSnapshotBeforeUpdateExampleCode from './../Images/GetSnapshotBeforeUpdateCode.png';
 
 class GetSnapshotBeforeUpdateExample extends Component {
@@ -26,13 +26,15 @@ class GetSnapshotBeforeUpdateExample extends Component {
   		document.getElementById("beforeUpdateColor2").style.color = prevState.color2;
   		document.getElementById("beforeUpdateColor3").innerHTML = "Prior color 3: " + prevState.color3;
   		document.getElementById("beforeUpdateColor3").style.color = prevState.color3;
+
+  		return null;
   	}
 
   	componentDidUpdate() {    
 	}
 
   	changeColor = () => {
-  		alert("Every time you change the colors the prior values are stored and shown, see below");
+  		alert("Every time you change the colors their prior values are stored and shown as Prior State, see below");
 
 	    this.setState({
 	    	state: "updated values",
@@ -43,9 +45,7 @@ class GetSnapshotBeforeUpdateExample extends Component {
   	}
 
 	resetColor = () => {
-		alert("Every time you restore the colors the prior values are stored and shown, see below");
-
-	  	if (this.state.state !== "initial values") {
+		if (this.state.state !== "initial values") {
 	  		this.setState({
 		 		state: "restored values",
 		 		color1: "red", 
@@ -125,6 +125,6 @@ class GetSnapshotBeforeUpdateExampleCodeComponent extends Component {
 		);
 	}
 }
-
+//
 export { GetSnapshotBeforeUpdateExampleCodeComponent };
 export default GetSnapshotBeforeUpdateExample;

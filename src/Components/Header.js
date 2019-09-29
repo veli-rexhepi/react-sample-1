@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import 'w3-css/4/w3pro.css';
-import styles from './Header.module.css';
+import styles from './../CSS/Header.module.css';
 import companyLogo from './../Images/Sallyport Caliburn Logo 3 250x50.png';
 
 class Header extends Component {
@@ -13,8 +13,8 @@ class Header extends Component {
 					</a>
 
 					<div>
-						<p className={styles.siteTitle}>React UI Samples</p>
-			            <p className={styles.siteTitleDescription}>Interactive user interface developed using React components & methods</p>
+						<p className={styles.siteTitle}>React Components & Methods</p>
+			            <p className={styles.siteTitleDescription}>An interactive React web application sample developed using components & methods</p>
 			        </div>
 
 			        <div className={styles.searchBar}>

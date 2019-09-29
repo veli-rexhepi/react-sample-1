@@ -1,7 +1,7 @@
 /* Method ShouldComponentUpdateExample() */
 
 import React, { Component } from 'react';
-import styles from './allComponentsCSS.module.css';
+import styles from './../CSS/allComponentsCSS.module.css';
 import ShouldComponentUpdateExampleCode from './../Images/ShouldComponentUpdateCode.png';
 
 class ShouldComponentUpdateExample extends Component {
@@ -125,7 +125,7 @@ class ShouldComponentUpdateExample extends Component {
 			            <label className={styles.displayBlockLabel} style={{color: this.state.color3}}>Color 3: {this.state.color3}</label>		            
 		            </div>
 		            <div className={[styles.verticalOrder, styles.horizontalOrderRight].join(' ')}>										
-						<label id="beforeUpdateState" className={styles.displayBlockLabel} >Component Update</label>			            
+						<label className={styles.displayBlockLabel} >Component Update</label>			            
                     	{ this.setSelectedIfTrue() }
 		            </div>
 	            </div>

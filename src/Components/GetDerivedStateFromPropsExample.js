@@ -1,7 +1,7 @@
 /* Method getDerivedStateFromProps() */
 
 import React, { Component } from 'react';
-import styles from './allComponentsCSS.module.css';
+import styles from './../CSS/allComponentsCSS.module.css';
 import GetDerivedStateFromPropsExampleCode from './../Images/GetDerivedStateFromPropsCode.png';
 
 class GetDerivedStateFromPropsExample extends Component {
@@ -29,7 +29,7 @@ class GetDerivedStateFromPropsExample extends Component {
   	}
 
   	changeColor = () => {
-  		alert('getDerivedStateFromProps() set\'s the last two properties of the state object (Color 2 & 3) to their prior value, see' +
+  		alert('getDerivedStateFromProps() get\'s the last two state values (Color 2 & 3) from props and returns to the state object, see' +
   			' this method in the code. So, that\'s why the Color 2 & 3 remains in maroon (unchanged).');
 
 	    this.setState({

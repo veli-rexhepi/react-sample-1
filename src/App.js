@@ -5,10 +5,11 @@ import Footer from './Components/Footer.js';
 import SetStateExample, { SetStateExampleCodeComponent } from './Components/SetStateExample.js';
 import GetDerivedStateFromPropsExample, { GetDerivedStateFromPropsExampleCodeComponent } from './Components/GetDerivedStateFromPropsExample.js';
 import ComponentDidMountExample, { ComponentDidMountExampleCodeComponent } from './Components/ComponentDidMountExample.js';
-import ShouldComponentUpdateExample, { ShouldComponentUpdateExampleCodeComponent/*, ReactSelectComponent*/ } from './Components/ShouldComponentUpdateExample.js';
+import ShouldComponentUpdateExample, { ShouldComponentUpdateExampleCodeComponent } from './Components/ShouldComponentUpdateExample.js';
 import GetSnapshotBeforeUpdateExample, { GetSnapshotBeforeUpdateExampleCodeComponent } from './Components/GetSnapshotBeforeUpdateExample.js';
 import ComponentDidUpdateExample, { ComponentDidUpdateExampleCodeComponent } from './Components/ComponentDidUpdateExample.js';
 import ComponentWillUnmountExample, { ComponentWillUnmountExampleCodeComponent } from './Components/ComponentWillUnmountExample.js';
+import PassDataBetweenComponents from './Components/PassDataBetweenComponents.js';
 
 class App extends Component {
   render() {
@@ -35,7 +36,8 @@ class App extends Component {
               </div>
 
               <div className="horizontalOrder">                
-                <ComponentWillUnmountExample />             
+                <ComponentWillUnmountExample />  
+                <PassDataBetweenComponents />           
               </div>
             </div>
           </div> 
@@ -48,7 +50,7 @@ class App extends Component {
               <ShouldComponentUpdateExampleCodeComponent />
               <GetSnapshotBeforeUpdateExampleCodeComponent />
               <ComponentDidUpdateExampleCodeComponent />
-              <ComponentWillUnmountExampleCodeComponent />
+              <ComponentWillUnmountExampleCodeComponent />              
             </article>
           </div>         
         </div>

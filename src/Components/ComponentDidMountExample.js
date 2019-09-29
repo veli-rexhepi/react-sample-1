@@ -1,7 +1,7 @@
 /* Method ComponentDidMountExample() */
 
 import React, { Component } from 'react';
-import styles from './allComponentsCSS.module.css';
+import styles from './../CSS/allComponentsCSS.module.css';
 import ComponentDidMountExampleCode from './../Images/ShouldComponentUpdateCode.png';
 
 class ComponentDidMountExample extends Component {

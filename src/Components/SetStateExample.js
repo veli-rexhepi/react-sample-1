@@ -1,7 +1,7 @@
 /* Method setState() */
 
 import React, { Component } from 'react';
-import styles from './allComponentsCSS.module.css';
+import styles from './../CSS/allComponentsCSS.module.css';
 import SetStateExampleCode from './../Images/setStateExampleCode.png';
 
 class SetStateExample extends Component {
