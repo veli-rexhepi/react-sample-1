@@ -19,7 +19,7 @@ class SetStateExample extends Component {
 
   	// Chage the component state values only
   	changeColor = () => {
-  		alert('setState() called to change the component state values\n\nsee changeColor method in code');
+  		alert('This method changes the state object values of the component, see changeColor method in the code.');
 
 	    this.setState({
 	    	state: 'updated values',

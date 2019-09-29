@@ -29,9 +29,8 @@ class GetDerivedStateFromPropsExample extends Component {
   	}
 
   	changeColor = () => {
-  		alert('getDerivedStateFromProps() is called right before rendering and it set\'s (overwrites) the last two properties ' + 
-  			'of the state object as shown in the getDerivedStateFromProps() method, see the code. So, that\'s why the Color 2 & 3 ' + 
-  			'remains in maroon (unchanged).');
+  		alert('getDerivedStateFromProps() set\'s the last two properties of the state object (Color 2 & 3) to their prior value, see' +
+  			' this method in the code. So, that\'s why the Color 2 & 3 remains in maroon (unchanged).');
 
 	    this.setState({
 	    	state: "updated values",
@@ -43,9 +42,6 @@ class GetDerivedStateFromPropsExample extends Component {
 
 	resetColor = () => {
 	  	if (this.state.state !== "initial values") {
-	  		alert('getDerivedStateFromProps() is called right before rendering and it set\'s (overwrites) the last two properties ' + 
-  				'of the state object as shown in the getDerivedStateFromProps() method, see the code. So, that\'s why the Color 2 & 3 ' + 
-  				'remains in maroon (unchanged).');
 
 	  		this.setState({
 		 		state: "restored values",
