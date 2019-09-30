@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react';
 import styles from './../CSS/allComponentsCSS.module.css';
-import SetStateExampleCode from './../Images/setStateExampleCode.png';
+import SetStateExampleCode from './../Images/SetStateCode.png';
 
 class SetStateExample extends Component {
 
