@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import 'w3-css/4/w3pro.css';
 import styles from './../CSS/Header.module.css';
-import companyLogo from './../Images/Sallyport Caliburn Logo 3 250x50.png';
+// import companyLogo from './../Images/Company Logo 3 250x50.png';
 
 class Header extends Component {
 	render() {
