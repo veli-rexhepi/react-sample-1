@@ -9,7 +9,7 @@ import ShouldComponentUpdateExample, { ShouldComponentUpdateExampleCodeComponent
 import GetSnapshotBeforeUpdateExample, { GetSnapshotBeforeUpdateExampleCodeComponent } from './Components/GetSnapshotBeforeUpdateExample.js';
 import ComponentDidUpdateExample, { ComponentDidUpdateExampleCodeComponent } from './Components/ComponentDidUpdateExample.js';
 import ComponentWillUnmountExample, { ComponentWillUnmountExampleCodeComponent } from './Components/ComponentWillUnmountExample.js';
-
+import ReactFormComponent , { ReactFormComponentCodeComponent } from './Components/ReactFormComponent.js';
 import PassDataFromParentToChildComponent, { PassDataFromParentToChildCodeComponent } from './Components/PassDataFromParentToChildComponent.js';
 import PassDataFromChildToParentComponent, { PassDataFromChildToParentCodeComponent } from './Components/PassDataFromChildToParentComponent.js';
 
@@ -39,7 +39,7 @@ class App extends Component {
 
               <div className="horizontalOrder">                
                 <ComponentWillUnmountExample />  
-                          
+                <ReactFormComponent />
               </div>
 
               <div className="horizontalOrder">                
@@ -57,7 +57,8 @@ class App extends Component {
               <ShouldComponentUpdateExampleCodeComponent />
               <GetSnapshotBeforeUpdateExampleCodeComponent />
               <ComponentDidUpdateExampleCodeComponent />
-              <ComponentWillUnmountExampleCodeComponent />  
+              <ComponentWillUnmountExampleCodeComponent /> 
+              <ReactFormComponentCodeComponent /> 
               <PassDataFromParentToChildCodeComponent />  
               <PassDataFromChildToParentCodeComponent />         
             </article>
