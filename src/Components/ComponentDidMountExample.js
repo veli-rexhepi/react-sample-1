@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react';
 import styles from './../CSS/allComponentsCSS.module.css';
-import ComponentDidMountExampleCode from './../Images/ShouldComponentUpdateCode.png';
+import ComponentDidMountExampleCode from './../Images/ComponentDidMountCode.png';
 
 class ComponentDidMountExample extends Component {
 
@@ -83,7 +83,8 @@ class ComponentDidMountExample extends Component {
 		            	onClick={() => this.displayCompContent(true)}>Show Content</button>
 		            <button type="button" className={["w3-card-2 w3-button", styles.submitButton].join(' ')} 
 		            onClick={() => this.displayCompContent(false)}>Hide Content</button>
-		            <button id='ComponentDidMountExampleDisplaybutton' type='button' className={['w3-card-2 w3-button codeButton', styles.submitButton].join(' ')} 
+		            <button id='ComponentDidMountExampleDisplaybutton' type='button' 
+		            className={['w3-card-2 w3-button codeButton', styles.submitButton].join(' ')} 
 		            	onClick={this.displayCode}>Display Code</button>
 	            </div>	
           	</article>

@@ -9,7 +9,7 @@ class Header extends Component {
 			<header className={["w3-card-4", styles.header].join(' ')}>
 				<div className={styles.headerContainer}>
 					<a className={styles.companyLogoHolder} href="header.js" target="_parent">
-						<img src={companyLogo} alt="Company Logo" width="250" height="50" />
+						{/*<img src={companyLogo} alt="Company Logo" width="250" height="50" />*/}
 					</a>
 
 					<div>

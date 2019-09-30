@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react';
 import styles from './../CSS/allComponentsCSS.module.css';
-import ComponentWillUnmountExampleCode from './../Images/setStateExampleCode.png';
+import ComponentWillUnmountExampleCode from './../Images/ComponentWillUnmountExampleCodeImg.png';
 
 class ComponentWillUnmountExample extends Component {
 
@@ -67,9 +67,12 @@ class ComponentWillUnmountExample extends Component {
 				{compCont}
 
 				<div className={[styles.horizontalOrder, styles.emptySpaceMargin].join(' ')}>
-		            <button type="button" className={["w3-card-2 w3-button", styles.submitButton].join(' ')} onClick={() => this.displayCompContent(true)}>Show Content</button>
-		            <button type="button" className={["w3-card-2 w3-button", styles.submitButton].join(' ')} onClick={() => this.displayCompContent(false)}>Hide Content</button>
-		            <button id='ComponentWillUnmountExampleDisplaybutton' type='button' className={['w3-card-2 w3-button codeButton', styles.submitButton].join(' ')} 
+		            <button type="button" className={["w3-card-2 w3-button", styles.submitButton].join(' ')} 
+		            	onClick={() => this.displayCompContent(true)}>Show Content</button>
+		            <button type="button" className={["w3-card-2 w3-button", styles.submitButton].join(' ')} 
+		            	onClick={() => this.displayCompContent(false)}>Hide Content</button>
+		            <button id='ComponentWillUnmountExampleDisplaybutton' type='button' 
+		            	className={['w3-card-2 w3-button codeButton', styles.submitButton].join(' ')} 
 		            	onClick={this.displayCode}>Display Code</button>
 	            </div>	
           	</article>
