@@ -9,7 +9,9 @@ import ShouldComponentUpdateExample, { ShouldComponentUpdateExampleCodeComponent
 import GetSnapshotBeforeUpdateExample, { GetSnapshotBeforeUpdateExampleCodeComponent } from './Components/GetSnapshotBeforeUpdateExample.js';
 import ComponentDidUpdateExample, { ComponentDidUpdateExampleCodeComponent } from './Components/ComponentDidUpdateExample.js';
 import ComponentWillUnmountExample, { ComponentWillUnmountExampleCodeComponent } from './Components/ComponentWillUnmountExample.js';
-import PassDataBetweenComponents from './Components/PassDataBetweenComponents.js';
+
+import PassDataFromParentToChildComponent, { PassDataFromParentToChildCodeComponent } from './Components/PassDataFromParentToChildComponent.js';
+import PassDataFromChildToParentComponent, { PassDataFromChildToParentCodeComponent } from './Components/PassDataFromChildToParentComponent.js';
 
 class App extends Component {
   render() {
@@ -37,7 +39,12 @@ class App extends Component {
 
               <div className="horizontalOrder">                
                 <ComponentWillUnmountExample />  
-                <PassDataBetweenComponents />           
+                          
+              </div>
+
+              <div className="horizontalOrder">                
+                <PassDataFromParentToChildComponent />  
+                <PassDataFromChildToParentComponent />           
               </div>
             </div>
           </div> 
@@ -50,7 +57,9 @@ class App extends Component {
               <ShouldComponentUpdateExampleCodeComponent />
               <GetSnapshotBeforeUpdateExampleCodeComponent />
               <ComponentDidUpdateExampleCodeComponent />
-              <ComponentWillUnmountExampleCodeComponent />              
+              <ComponentWillUnmountExampleCodeComponent />  
+              <PassDataFromParentToChildCodeComponent />  
+              <PassDataFromChildToParentCodeComponent />         
             </article>
           </div>         
         </div>
